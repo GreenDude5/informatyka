@@ -1,0 +1,32 @@
+105.1
+540 faktur
+200 zł
+
+105.2
+Miasto	Ile
+Bielawa		5
+Jelenia Gora	5
+Olawa		1
+Olesnica	1
+Sobotka		8
+Trzebnica	4
+Walbrzych	5
+Wolow		13
+Wroclaw		33
+Zlotoryja	3
+
+105.3
+
+105.4
+Primula japonica
+Carex Comans
+Echinacea Tomato Soup
+Echinacea Black Beauty
+
+105.5
+Rozmiary_doniczki	ile_zamowien
+10x10x20		85
+11x11x11		355
+13x13x13		96
+9x9x12			429
+9x9x9			1051
