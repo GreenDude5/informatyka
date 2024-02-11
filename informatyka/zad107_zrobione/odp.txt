@@ -1,0 +1,46 @@
+107.1
+miejsce_docelowe	LiczbaDni
+Warszawa		83
+Dusseldorf		78
+Warszawa Modlin		68
+
+107.2
+nazwisko	imie		ile
+Krankowska	Joanna		16
+Lipinski	Artur		16
+Wilkonska	Marta		18
+Wirowski	Marcin		16
+Wronikowska	Magdalena	19
+
+107.3
+miesiac	ile
+4	72
+5	87
+6	95
+
+107.4
+imie	nazwisko	miejsce_docelowe	godzina
+Anna	Gumowska	Londyn Stansed	09:15:00
+Amelia	Hanke	Londyn Stansed	09:15:00
+Waldemar	Kowal	Londyn Luton	09:15:00
+Jan	Krupa	Londyn Luton	09:15:00
+Mariola	Krupa	Londyn Stansed	09:15:00
+Jakub	Kupinski	Londyn Stansed	09:15:00
+Artur	Lipinski	Londyn Luton	09:15:00
+Krystyna	Lis	Londyn Stansed	09:15:00
+Beata	Pawlikowska	Londyn Stansed	09:15:00
+Monika	Sibilska	Londyn Stansed	09:15:00
+Jowita	Tobera	Londyn Stansed	09:15:00
+Agnieszka	Waruszewska	Londyn Luton	09:15:00
+Agata	Wilczek	Londyn Luton	09:15:00
+Marcin	Wirowski	Londyn Luton	09:15:00
+Sylwester	Wojtas	Londyn Stansed	09:15:00
+Monika	Zawadzka	Londyn Stansed	09:15:00
+
+107.5
+id_lotu	miejsce_docelowe
+21	Bolonia
+99	Barcelona
+316	Warszawa
+522	Liverpool
+987	Oslo Torp
