@@ -1,85 +1,78 @@
+import math
+
 s1 = open("./58/dane_systemy1.txt", "r")
 s2 = open("./58/dane_systemy2.txt", "r")
 s3 = open("./58/dane_systemy3.txt", "r")
 
-def p1():
-    mintemperatura = 999999
-    for lines in s3:
-        dane = lines.split(" ")
-        temperatura = int(dane[1],8)
-        if temperatura < mintemperatura:
-            mintemperatura = temperatura
-        print(" " + str(temperatura))
-    print(mintemperatura)
+def p1(file1, file2, file3):
+    min1 = 999999
+    min2 = 999999
+    min3 = 999999
+    
+    for i in range(1095):
+        data1 = int(file1.readline().split(" ")[1],2)
+        data2 = int(file2.readline().split(" ")[1],4)
+        data3 = int(file3.readline().split(" ")[1],8)
+        
+        if data1 < min1: min1 = data1
+        if data2 < min2: min2 = data2
+        if data3 < min3: min3 = data3
+        
+    print(f"s1: {min1}")
+    print(f"s2: {min2}")
+    print(f"s3: {min3}")
 
 def p2(file1, file2, file3):
-    faulty1 = []
-    lasttime1 = 0
-    for lines in file1:
-        dane = lines.split(" ")
-        zegar = int(dane[0],2)
-        if zegar != lasttime1 + 24:
-            faulty1.append(zegar)
-            
-    faulty2 = []
-    lasttime2 = 0
-    for lines in file2:
-        dane = lines.split(" ")
-        zegar = int(dane[0],4)
-        if zegar != lasttime2 + 24:
-            faulty2.append(zegar)
-            
-    faulty3 = []
-    lasttime3 = 0
-    for lines in file3:
-        dane = lines.split(" ")
-        zegar = int(dane[0],8)
-        if zegar != lasttime3 + 24:
-            faulty3.append(zegar)
-            
-    faulty1.pop(0)
-    faulty2.pop(0)
-    faulty3.pop(0)
-    
-    matches = []
-    
-    for i in faulty1:
-        if i in faulty2 and i in faulty3:
-            matches.append(i)
-    print(matches)
-    print(len(matches))
+    counter = 0
+    state = 12
+    for i in range(1095):
+        data1 = int(file1.readline().split(" ")[0],2)
+        data2 = int(file2.readline().split(" ")[0],4)
+        data3 = int(file3.readline().split(" ")[0],8)
+        if data1 != state and data2 != state and data3 != state:
+            counter += 1
+        state += 24
+        
+    print(counter)
     
 def p3(file1, file2, file3):
-    lastday1 = -999999
-    records1 = []
-    for lines in file1:
-        dane = lines.split(" ")
-        temperatura = int(dane[1],2)
-        if temperatura > lastday1:
-            records1.append(temperatura)
-        lastday1 = temperatura
+    counter = 0
+    max1 = 0
+    max2 = 0
+    max3 = 0
+    for i in range(1095):
+        newRecord = False
+        data1 = int(file1.readline().split(" ")[1],2)
+        data2 = int(file2.readline().split(" ")[1],4)
+        data3 = int(file3.readline().split(" ")[1],8)
         
-    lastday2 = -999999
-    records2 = []
-    for lines in file2:
-        dane = lines.split(" ")
-        temperatura = int(dane[1],4)
-        if temperatura > lastday2:
-            records2.append(temperatura)
-        lastday2 = temperatura
+        if data1 > max1: max1 = data1; newRecord = True
+        if data2 > max2: max2 = data2; newRecord = True
+        if data3 > max3: max3 = data3; newRecord = True
+        if newRecord: counter += 1
         
-    lastday3 = -999999
-    records3 = []
-    for lines in file3:
-        dane = lines.split(" ")
-        temperatura = int(dane[1],8)
-        if temperatura > lastday3:
-            records3.append(temperatura)
-        lastday3 = temperatura
-
-    recorddaycount = [len(records1), len(records2), len(records3)]
-    print(min(recorddaycount))
+    print(counter)
     
-p1()
-#p2(s1, s2, s3)
-#p3(s1, s2, s3)
+def p4(file1):
+    data = []
+    for lines in file1:
+        data.append(int(lines.split(" ")[1],2))
+    
+    maxJump = -999999
+    for i in range(1095):
+        for j in range(i+1, 1095):
+            data1 = data[i]
+            data2 = data[j]
+            r = pow(data1 - data2, 2)
+            diff = abs(i - j)
+            jump = math.ceil(r / diff)
+            if jump > maxJump: maxJump = jump
+            
+    print(maxJump)
+            
+            
+            
+p1(s1, s2, s3)
+p2(s1, s2, s3)
+p3(s1, s2, s3)
+p4(s1)
