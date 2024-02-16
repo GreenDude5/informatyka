@@ -1,0 +1,22 @@
+108.1
+45171
+
+108.2
+nazwa	dlugosc
+DW990	13
+
+108.3
+id_drogi	średnia
+22		8,2
+
+108.4
+nazwa
+Autostrada Torunska
+Gliwicka Autostrada
+
+108.5
+kategoria	Blisko od szosy	Czysta Nafta	Dobre Paliwo	Dyskont paliwowy	Green Fuel	Najpierw Ropa	Nitrogaz	Petrochemia Centralna	Standard Oil	Szybka Stacja
+autostrada	23	25	22	21	19	23	31	21	21	16
+droga ekspresowa	50	44	56	46	40	45	52	42	50	43
+droga krajowa	136	105	112	117	120	128	120	120	127	106
+droga wojewodzka	233	235	223	230	261	217	205	213	241	209
