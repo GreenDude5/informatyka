@@ -37,6 +37,20 @@ def p3(file1, file2):
 
     print(countEq, countHi)
 
+def p4(file):
+    countDec = 0; countOct = 0
+    for i in range(1000):
+        numDec = int(file.readline().strip())
+        numOct = int(str(oct(numDec)).removeprefix("0o"))
+        for j in [*str(numDec)]:
+            if int(j) == 6: countDec += 1
+        for k in [*str(numOct)]:
+            if int(k) == 6: countOct += 1
+
+    print(countDec)
+    print(countOct)
+
 # p1(file1)
 # p2(file2)
-p3(file1, file2)
+# p3(file1, file2)
+p4(file2)
