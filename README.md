@@ -1,3 +1,7 @@
-Nie wiem, nie umiem w readme więc napiszę tak sobie tutaj coś
+# PRZYGOTOWANIE DO MATURY Z INFORMATYKI DLA OPORNYCH!
 
-nauka czy coś do maturki z informatyki
+ale mi się nie chciało/chce tego robić
+
+# ZADANIA ZE ZBIORU ZADAŃ OD CKE WRAZ Z ROZWIĄZANIAMI!
+
+nie ma drogi
