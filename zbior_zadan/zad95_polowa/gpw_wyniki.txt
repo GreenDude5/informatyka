@@ -1,0 +1,14 @@
+95.1
+LPP
+WAWEL
+PZU
+
+95.2
+INVENTUM
+
+95.3
+rodzaj		liczba	obroty		udział
+krajowa		418	2427046811	98,79%
+zagraniczna	52	29736190	1,21%
+
+95.4
